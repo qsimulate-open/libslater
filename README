@@ -1,0 +1,18 @@
+This program the 2D interpolation routines to compute Slater and Yukawa integrals.
+The citations to the original article / note are appreciated, when one publishes some product using this program.
+
+* T. Shiozaki, Chemical Physics Letters 479, 160 (2009)
+* T. Shiozaki, Journal of Unsolved Question 1, 1 (2011)
+
+To install, please follow the standard procedure:
+aclocal
+autoconf
+autoheader
+automake -a
+mkdir obj
+cd obj
+../configure
+make
+
+The current set-up might be a little conservative (i.e., less efficient).
+Let me ask any question to Toru Shiozaki <toru@tshiozaki.net>
