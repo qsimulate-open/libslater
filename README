@@ -14,5 +14,16 @@ cd obj
 ../configure
 make
 
+The generated files require some handling: s/e-/d-/g and s/e+/d+/g to be recognized as double precision.
+Also, one needs to compile and link module.f90 (can be found in src) to use them, which allocates some stack area.
+
+The interface to the function is
+
+// subroutine root2(ta, ua, rr, ww, n)
+
+where ta and ua are arrays of T and U (of length n) and
+it returns quadrature grid positions rr and weights ww (of length 2*n in this case).
+
+
 The current set-up might be a little conservative (i.e., less efficient).
 Let me ask any question to Toru Shiozaki <toru@tshiozaki.net>
