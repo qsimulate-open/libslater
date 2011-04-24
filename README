@@ -14,6 +14,10 @@ cd obj
 ../configure
 make
 
+You need to have a path to BLAS, GMP, and MPFR libraries. They can be passed to configure by
+../configure LDFLAGS=... 
+
+
 The generated files require some handling: s/e-/d-/g and s/e+/d+/g to be recognized as double precision.
 Also, one needs to compile and link module.f90 (can be found in src) to use them, which allocates some stack area.
 
