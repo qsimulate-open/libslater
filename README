@@ -1,13 +1,13 @@
 This program the 2D interpolation routines to compute Slater and Yukawa integrals.
 The citations to the original article / note are appreciated, when one publishes some product using this program.
 
-* T. Shiozaki, Chemical Physics Letters 479, 160 (2009)
-* T. Shiozaki, Journal of Unsolved Question 1, 1 (2011)
+* T. Shiozaki, Chemical Physics Letters 479, 160 (2009)   at http://dx.doi.org/10.1016/j.cplett.2009.07.108 
+* T. Shiozaki, Journal of Unsolved Question 1, 1 (2011)   at http://junq.info/?p=348
 
 To install, please follow the standard procedure:
 aclocal
-autoconf
 autoheader
+autoconf
 automake -a
 mkdir obj
 cd obj
@@ -19,7 +19,9 @@ You need to have a path to BLAS, GMP, and MPFR libraries. They can be passed to 
 
 
 The generated files require some handling: s/e-/d-/g and s/e+/d+/g to be recognized as double precision.
-Also, one needs to compile and link module.f90 (can be found in src) to use them, which allocates some stack area.
+Also, one needs to compile and link module.f90 (can be found in src) to use them, which allocates some stack area,
+or make a similar routine. Note that the size of array is dependent on the rank of quadrature (NGRID in src/local_macro.h)
+and therefore should be adjusted.
 
 The interface to the function is
 
