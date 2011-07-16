@@ -32,7 +32,7 @@ void generate() {
   const int nboxes = (tfence - tstart) * (ufence - ustart);
   const int npoints_sq = npoints * npoints;
 
-for (int rank = 1; rank != 10; ++rank) {
+for (int rank = 1; rank != 14; ++rank) {
   ofstream ofs;
   stringstream ofs2;
   stringstream list;

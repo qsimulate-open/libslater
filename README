@@ -14,7 +14,8 @@ cd obj
 ../configure
 make
 
-You need to have a path to BLAS, GMP, and MPFR libraries. They can be passed to configure by
+You need to have a path to BLAS, GMP, and MPFR libraries. In addition, INCLUDE path to the boost library is needed.
+They can be passed to configure by, e.g.,
 ../configure LDFLAGS=... 
 
 
