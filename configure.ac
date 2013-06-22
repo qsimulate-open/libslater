@@ -24,5 +24,6 @@ AC_CONFIG_MACRO_DIR([m4])
 # Checks for library functions.
 
 AC_CONFIG_FILES([Makefile
-                 src/Makefile])
+                 src/Makefile
+                 lib/Makefile])
 AC_OUTPUT
