@@ -1,10 +1,10 @@
 This program compiles 2D interpolation routines for Slater and Yukawa integral evaluation.
-Citations to the original article / note below are appreciated, when one publishes an article using this code.
 
 * T. Shiozaki, Chemical Physics Letters 479, 160 (2009)   at http://dx.doi.org/10.1016/j.cplett.2009.07.108 
 * T. Shiozaki, Journal of Unsolved Question 1, 1 (2011)   at http://junq.info/?p=348
 
 To install, please follow the standard procedure:
+glibtoolize (or libtoolize)
 aclocal
 autoheader
 autoconf
@@ -18,21 +18,11 @@ You need to have a path to BLAS, GMP, and MPFR libraries. In addition, INCLUDE p
 They can be passed to configure by, e.g.,
 ../configure LDFLAGS=... 
 
+By running SlaterGen, you will generate source files. They could be copied to ./lib to build a library.
 
-The generated files require some handling: s/e-/d-/g and s/e+/d+/g for numbers to be recognized as double precision.
-Also, one needs to compile and link module.f90 (can be found in src) that allocates some stack area,
-or to make a similar routine. Note that the size of arrays is dependent on the rank of quadrature (NGRID in src/local_macro.h)
-and therefore should be adjusted.
-
-The interface to the function is
-
-// subroutine root2(ta, ua, rr, ww, n)
-
-where ta and ua are arrays of T and U (of length n) and
-it returns quadrature grid positions rr and weights ww (of length 2*n in this case).
-
+The interface to the function is written in prefix/include/srootlist.h
 
 The current set-up is a little conservative (i.e., less efficient). If you pursue performance, it is better to
 find the best settings by changing NGRID or quadrature box defintion. 
 
-Ask me any questions at <toru@tshiozaki.net>
+Please ask questions at shiozaki@northwestern.edu
