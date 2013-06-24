@@ -203,7 +203,7 @@ void SRootList::root" << rank <<  "(const double* ta, const double* ua, double* 
       const mpreal mp28 = npoints * 2;
       for (int k = 1; k <= npoints; ++k) {
         for (int i = 1; i <= rank * 2; ++i) {
-          const double mpcos = static_cast<double>(mpfr::cos(pij * (k + k - 1) / mp28));
+          const double mpcos = (mpfr::cos(pij * (k + k - 1) / mp28)).toDouble();
           if (fabs(mpcos) < tiny) {
           ofs2<< "\
 //  d[" << i-1 << "] = d[" << i-1 << "];" << endl;

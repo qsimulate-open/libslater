@@ -95,8 +95,8 @@ vector<vector<double> > get_C(const int tbase, const int ubase, int rank) {
           sum += cdx[i * n + k] * cos(pi * j * (k + 0.5) / n);
           sum2 += cdw[i * n + k] * cos(pi * j * (k + 0.5) / n);
         }
-        tc[i * n + j] = sum * fac;
-        tc2[i * n + j] = sum2 * fac;
+        tc[i * n + j] = (sum * fac).toDouble();
+        tc2[i * n + j] = (sum2 * fac).toDouble();
       }
     }
     c.push_back(tc);
