@@ -25,13 +25,12 @@
 
 #include <cmath>
 #include <stdexcept>
-#include <slatermem.h>
 #include <srootlist.h>
 
 using namespace std;
 using namespace bagel;
 
-void SlaterMem::fill1() {
+void SRootList::SlaterMem::fill1() {
   double* x = datax_[0].get();
   double* w = dataw_[0].get();
   x[0] =   1.02936824536931917e-03;
@@ -39787,7 +39786,7 @@ void SRootList::root1(const double* ta, const double* ua, double* rr, double* ww
     g[0] = t2 * d[0] - g[0] + imc[1][0];
     g[1] = t2 * d[1] - g[1] + imc[1][1];
 
-    offset = (i - 1) * 1;
+    offset = i * 1;
     uu = 1.0 / sqrt(u);
     rr[offset + 0] = tt * g[0] - d[0] + imc[0][0] * 0.5;
     ww[offset + 0] = (tt * g[1] - d[1] + imc[0][1] * 0.5) * uu;

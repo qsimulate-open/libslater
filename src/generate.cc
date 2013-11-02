@@ -73,13 +73,12 @@ for (int rank = 1; rank != 14; ++rank) {
 \n\
 #include <cmath>\n\
 #include <stdexcept>\n\
-#include <slatermem.h>\n\
 #include <srootlist.h>\n\
 \n\
 using namespace std;\n\
 using namespace bagel;\n\
 \n\
-void SlaterMem::fill" << rank << "() {\n\
+void SRootList::SlaterMem::fill" << rank << "() {\n\
   double* x = datax_[" << rank-1 << "].get();\n\
   double* w = dataw_[" << rank-1 << "].get();" << endl;
 
