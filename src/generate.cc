@@ -246,7 +246,7 @@ void SRootList::root" << rank <<  "(const double* ta, const double* ua, double* 
   }
   ofs2<< endl;
   ofs2<< "\
-    offset = (i - 1) * " << rank << ";" << endl;
+    offset = i * " << rank << ";" << endl;
   ofs2<< "\
     uu = 1.0 / sqrt(u);" << endl;
   for (int i = 1; i <= rank; ++i)
