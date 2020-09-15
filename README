@@ -25,4 +25,4 @@ The interface to the function is written in prefix/include/srootlist.h
 The current set-up is a little conservative (i.e., less efficient). If you pursue performance, it is better to
 find the best settings by changing NGRID or quadrature box defintion. 
 
-Please ask questions at shiozaki@northwestern.edu
+Please ask questions at shiozaki@qsimulate.com
